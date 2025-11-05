@@ -247,7 +247,7 @@
         font-family: "Charm", cursive;
         font-size: 1.05rem;
         color: #2b2b2b;
-        margin-bottom: 18px;
+        /* margin-bottom: 18px; */
         border-top: 1px solid rgba(0, 0, 0, 0.04);
       }
       .letter .title {
@@ -276,7 +276,7 @@
         /* font-family: "Parisienne", cursive; */
         font-size: 1.22rem;
       }
-      
+
       .highlight {
         color: var(--accent-2);
       }
@@ -355,6 +355,14 @@
         text-align: center;
       }
 
+      .creator-watermark {
+        color: transparent;
+        text-align: center;
+        font-family: "Satisfy", cursive;
+        font-weight: 700;
+        margin-top: 50px;
+      }
+
       /* subtle animations */
       @keyframes cardEnter {
         from {
@@ -412,11 +420,7 @@
     <main class="invite" id="inviteRoot" role="main">
       <!-- Front card (poster-style) -->
       <article class="card" aria-labelledby="namesHeading">
-        <img
-          class="floral"
-          src="img/floral.jpg"
-          alt="Floral decoration (replaceable)"
-        />
+        <img class="floral" src="img/floral.jpg" alt="Floral decoration" />
 
         <div class="front-inner">
           <div class="subtitle">Save the Date</div>
@@ -427,7 +431,7 @@
           <img
             class="illustration"
             src="img/couple.png"
-            alt="Couple illustration (replaceable)"
+            alt="Couple illustration"
           />
 
           <!-- Action buttons (directions, call, save, share, RSVP) -->
@@ -435,7 +439,7 @@
             <a
               class="btn"
               id="directionsBtn"
-              href="https://maps.app.goo.gl/vHRmMBhDpsuoi2ms7"
+              href="https://maps.app.goo.gl/4xGKSMpG9ryyKcWy5"
               target="_blank"
               rel="noopener"
               >📍 Directions</a
@@ -514,22 +518,31 @@
 
           <div class="media-row">
             <img
+              src="img/map-preview.jpg"
+              alt="map photo"
+              data-type="image"
+              data-src="img/map-preview.jpg"
+              class="thumb"
+            />
+            <img
               src="img/rose palace.jpg"
               alt="Venue photo"
               data-type="image"
               data-src="img/rose palace.jpg"
               class="thumb"
             />
+          </div>
+          <div class="media-row" style="width: 100%">
             <div
               class="video-thumb thumb"
               data-type="video"
               data-src="img/video.mp4"
+              style="width: 100%;height: 45vh;"
             >
-              <img
-                class=".media-row img"
+              <img class="media-row"
                 src="img/video_thumb.png"
                 alt="Venue Video"
-                style="width: 100%"
+                style="width:100%;height:100%;margin-top:0;"
               />
               <!-- <span class="overlay">▶ Watch</span> -->
             </div>
@@ -538,21 +551,41 @@
       </article>
 
       <!-- Letter section (formal text) -->
-      <article class="letter" aria-label="Formal invitation letter">
+      <article class="letter" aria-label="Formal invitation letter Urdu" style="text-align:end;margin-bottom: 0;">
+        <div class="title">مہترم جاناب</div>
+
+        <p>
+          بِحمد سبحان و تعالی، میں اہلیہ مرحوم علی احمد، بڑے فخر اور اعزاز کے ساتھ اپنی پوتی نمایاں ندیم سلمہا دختر ندیم احمد کا رشتۂ ازدواجی عامرحمزہ سلمہ ابن محمد طاہر صاحب، نیپال گنج کے ساتھ طے پانے کی اطلاع دیتی ہوں۔
+        </p>
+
+        <p>
+          بروز جمعرات، بتاریخ 20 نومبر 2025، بمقام روز پیلس، دوپہر 12 بجے سےمحفل نکاح اور دعوت تعام کو رونق بخشنے کے لئے ہم آپ کی بابرکت حاضری اور دعاؤں کے طلبگار ہیں۔
+        </p>
+
+        <div class="signature">
+          المستدعی<br />
+          اہلیہ مرحوم علی احمد<br />
+          <span class="muted">موبائل: 7275540470 • 7054638593</span>
+        </div>
+      </article>
+      <!-- Letter section (formal text) -->
+      <article class="letter" aria-label="Formal invitation letter English">
         <div class="title">Mohtaram Janab</div>
 
         <p>
           With profound gratitude to the Almighty, I, Mrs. Ali Ahmad (late),
           feel greatly honoured to announce the sacred matrimonial bond of my
-          granddaughter, <strong class="highlight">Numaya Nadeem</strong> (D/o Nadeem Ahmad), with
-          <strong class="highlight">Amir Hamzah</strong> (S/o Mohd. Tahir Sb) of Nepalgunj.
+          granddaughter, <strong class="highlight">Numaya Nadeem</strong> (D/o
+          Nadeem Ahmad), with
+          <strong class="highlight">Amir Hamzah</strong> (S/o Mohd. Tahir Sb) of
+          Nepalgunj.
         </p>
 
         <p>
           We seek your esteemed presence and blessings to make the Nikah
           Ceremony and Dawat-e-Ta’am more illuminating on
-          <strong class="highlight">Thursday, 20th November 2025</strong>, at Rose Palace, from 12
-          p.m. onwards.
+          <strong class="highlight">Thursday, 20th November 2025</strong>, at
+          Rose Palace, from 12 p.m. onwards.
         </p>
 
         <div class="signature">
@@ -573,6 +606,11 @@
           Hamzah Haseeb <br />
           Noman Nadeem <br />
         </div>
+
+        <!-- Creator WaterMark -->
+        <div class="creator-watermark">
+        <p>Created By- Hamzah Haseeb</p>
+      </div>
       </article>
     </main>
 
